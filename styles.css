@@ -30,6 +30,7 @@ body {
   place-items: center;
   font-family: Arial, sans-serif;
   overflow: hidden;
+  height: 100%;
 }
 
 .calculator {
@@ -124,11 +125,16 @@ button[aria-label="star"]:hover {
 }
 
 @media (max-width: 600px) {
+  body {
+    min-height: 100dvh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: auto; 
+  }
+
   .calculator {
-    width: 80%;
-    max-width: 100%;
-    padding: 20px;
-    border-radius: 10px;
+    margin: 0 auto;
   }
 
   #display {
@@ -161,7 +167,10 @@ button[aria-label="star"]:hover {
   }
 
   .buttons button {
-    transition: background-color 0.1s, color 0.1s;
+    transition: 
+      background-color 0.1s ease-out, 
+      color 0.1s ease-out,
+      transform 0.1s ease-out;
   }
 
   .buttons button:active {
@@ -182,6 +191,8 @@ button[aria-label="star"]:hover {
   .buttons button.purple:not(:active) {
     background-color: var(--equals-bg) !important;
   }
+   
+ 
 }
 
 @media (max-width: 375px) {

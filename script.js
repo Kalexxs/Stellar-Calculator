@@ -69,4 +69,24 @@ function createStars() {
   }
 }
 
+const starButton = document.querySelector('button[aria-label="star"]');
+
+const isTouchDevice = 'ontouchstart' in window || navigator.maxTouchPoints > 0;
+
+if (isTouchDevice) {
+  starButton.addEventListener('click', function() {
+    this.style.transform = 'rotate(15deg)'; 
+    setTimeout(() => {
+      this.style.transform = 'rotate(0deg)'; 
+    }, 300); 
+  });
+} else {
+  starButton.addEventListener('mouseenter', function() {
+    this.style.transform = 'rotate(15deg)';
+  });
+  starButton.addEventListener('mouseleave', function() {
+    this.style.transform = 'rotate(0deg)';
+  });
+}
+
 updateDisplay();
