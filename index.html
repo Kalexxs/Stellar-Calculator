@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>Calculator</title>
+    <link rel="stylesheet" href="styles.css"/>
+    <style>
+      header,
+      footer {
+        display: none !important;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1 hidden>Calculadora Interactiva</h1>
+    </header>
+    <main>
+      <div class="calculator">
+        <input type="text" id="display" placeholder="0" readonly/>
+        <div class="buttons">
+          <button onclick="clearDisplay()" aria-label="Clear">C</button>
+          <button onclick="deleteLastChar()" aria-label="Delete">DEL</button>
+          <button onclick="createStars()" aria-label="star">✧</button>
+          <button onclick="handleOperation('/')" aria-label="Divide">÷</button>
+          <button onclick="appendNumber('7')" aria-label="Seven">7</button>
+          <button onclick="appendNumber('8')" aria-label="Eight">8</button>
+          <button onclick="appendNumber('9')" aria-label="Nine">9</button>
+          <button onclick="handleOperation('*')" aria-label="Multiply">×</button>
+          <button onclick="appendNumber('4')" aria-label="Four">4</button>
+          <button onclick="appendNumber('5')" aria-label="Five">5</button>
+          <button onclick="appendNumber('6')" aria-label="Six">6</button>
+          <button onclick="handleOperation('-')" aria-label="Subtract">-</button>
+          <button onclick="appendNumber('1')" aria-label="One">1</button>
+          <button onclick="appendNumber('2')" aria-label="Two">2</button>
+          <button onclick="appendNumber('3')" aria-label="Three">3</button>
+          <button onclick="handleOperation('+')" aria-label="Add">+</button>
+          <button onclick="appendNumber('.')" aria-label="Decimal">.</button>
+          <button onclick="appendNumber('0')" aria-label="Zero">0</button>
+          <button onclick="calculateResult()" class="purple" aria-label="Equals">=</button>
+        </div>
+      </div>
+    </main>
+    <footer hidden>
+      <p>Creado con HTML, CSS y JavaScript</p>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>
