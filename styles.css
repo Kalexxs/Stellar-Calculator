@@ -168,9 +168,9 @@ button[aria-label="star"]:hover {
 
   .buttons button {
     transition: 
-      background-color 0.1s ease-out, 
-      color 0.1s ease-out,
-      transform 0.1s ease-out;
+      background-color 0.3s ease-out, 
+      color 0.3s ease-out,
+      transform 0.3s ease-out;
   }
 
   .buttons button:active {
